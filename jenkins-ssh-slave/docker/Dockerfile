@@ -4,7 +4,7 @@ ENV OC_VERSION v3.6.1
 ENV OC_TAG 008f2d5
 ENV K8COMP_VERSION 0.6.1-rc1
 RUN apt-get update && \
-    apt-get install rubygems ed -y && \
+    apt-get install rubygems ed jq -y && \
     gem install hiera hiera-eyaml && \
     wget -O kubectl https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl && \
     mv ./kubectl /bin/kubectl && \
